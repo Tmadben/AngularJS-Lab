@@ -8,9 +8,9 @@
         
         <h3>Use Directives and Data Binding</h3>
         
-        Name:
+        Filter:
         <br />
-        <input type="text" ng-model="age"/>   {{ age }}
+        <input type="text" ng-model="filterValue"/>
         <br />
         <br />
         <ul>
@@ -45,7 +45,7 @@
         }
     ]'>
             <ol>
-                <li ng-repeat="customer in listCustomers | filter:age |orderBy:'name'">
+                <li ng-repeat="customer in listCustomers  | orderBy:'Age' | filter:filterValue">
                     Customer Name : {{ customer.name }} <br />
                     Customer Age : {{ customer.Age }}
                 </li>
