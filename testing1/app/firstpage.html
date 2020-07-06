@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html ng-app>
     <header>
-        <title>My first AngularJS app</title>
+        <title>My 1rst AngularJS Page</title>
     </header>
 
-    <body>
+    <body ng-init="listOffruits=['Pomme','Abricot','Banane','Orange']">
+        
+        <h3>Use Directives and Data Binding</h3>
+        
         Name:
         <br />
-        <input type="text" ng-model="name"/>{{ name }}
+        <input type="text" ng-model="name"/>   {{ name }}
+        <br />
+        <br />
+        <ul>
+            <li ng-repeat="fruit in listOffruits">{{ fruit }}</li>
+        </ul>
 
-        
         <script src="../../Scripts/angular.min.js"></script> 
     </body>
 </html>
