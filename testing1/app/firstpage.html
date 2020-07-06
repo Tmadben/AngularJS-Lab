@@ -3,20 +3,57 @@
     <header>
         <title>My 1rst AngularJS Page</title>
     </header>
-
+    
     <body ng-init="listOffruits=['Pomme','Abricot','Banane','Orange']">
         
         <h3>Use Directives and Data Binding</h3>
         
         Name:
         <br />
-        <input type="text" ng-model="name"/>   {{ name }}
+        <input type="text" ng-model="age"/>   {{ age }}
         <br />
         <br />
         <ul>
             <li ng-repeat="fruit in listOffruits">{{ fruit }}</li>
         </ul>
 
-        <script src="../../Scripts/angular.min.js"></script> 
+        <h3>Customers List Ordered by Age</h3>
+        <div class="container" ng-init='listCustomers=[
+        {
+            "name": "JOHN VICENT",
+            "Age": 50
+        },
+        {
+            "name": "CECILIA FRANK",
+            "Age": 18
+        },
+        {
+            "name": "BERNARD COUTEAU",
+            "Age": 60
+        },
+        {
+            "name": "ALAIN LE SAC",
+            "Age": 34
+        },
+        {
+            "name": "YVES DE JACQUES",
+            "Age": 45
+        },
+        {
+            "name": "LUCIE CARTELLE",
+            "Age": 49
+        }
+    ]'>
+            <ol>
+                <li ng-repeat="customer in listCustomers | filter:age |orderBy:'name'">
+                    Customer Name : {{ customer.name }} <br />
+                    Customer Age : {{ customer.Age }}
+                </li>
+            </ol>
+        </div>
+            
+
+        <script src="../../Scripts/angular.min.js"></script>
+    
     </body>
 </html>
