@@ -4,52 +4,71 @@
         <title>My 1rst AngularJS Page</title>
     </header>
     
-    <body ng-init="listOffruits=['Pomme','Abricot','Banane','Orange']">
+    <body>
         
-        <h3>Use Directives and Data Binding</h3>
+        <h3>Use Directives and Data Binding for Customers List</h3>
         
-        Filter:
-        <br />
+        Filter: 
+    
         <input type="text" ng-model="filterValue"/>
         <br />
-        <br />
-        <ul>
-            <li ng-repeat="fruit in listOffruits">{{ fruit }}</li>
-        </ul>
 
-        <h3>Customers List Ordered by Age</h3>
-        <div class="container" ng-init='listCustomers=[
-        {
-            "name": "JOHN VICENT",
-            "Age": 50
-        },
-        {
-            "name": "CECILIA FRANK",
-            "Age": 18
-        },
-        {
-            "name": "BERNARD COUTEAU",
-            "Age": 60
-        },
-        {
-            "name": "ALAIN LE SAC",
-            "Age": 34
-        },
-        {
-            "name": "YVES DE JACQUES",
-            "Age": 45
-        },
-        {
-            "name": "LUCIE CARTELLE",
-            "Age": 49
-        }
-    ]'>
-            <ol>
-                <li ng-repeat="customer in listCustomers  | orderBy:'Age' | filter:filterValue">
-                    Customer Name : {{ customer.name }} <br />
-                    Customer Age : {{ customer.Age }}
-                </li>
-            </ol>
+        <div class="container"
+            ng-init='listCustomers=
+            [
+                    {
+                        "firstName": "JOHANNA",
+                        "familyName": "VICENT",
+                        "gender": "F",
+                        "age": 50
+                    },
+                    {
+                        "firstName": "CECILIA",
+                        "familyName": "FRANK",
+                        "gender": "F",
+                        "age": 18
+                    },
+                    {
+                        "firstName": "BERNARD",
+                        "familyName": "COUTEAU",
+                        "gender": "M",
+                        "age": 60
+                    },
+                    {
+                        "firstName": "ALAIN",
+                        "familyName": "LE SAC",
+                        "gender": "M",
+                        "age": 34
+                    },
+                    {
+                        "firstName": "YVES",
+                        "familyName": "YDE JACQUES",
+                        "gender": "M",
+                        "age": 45
+                    },
+                    {
+                        "firstName": "LUCIE",
+                        "familyName": "CARTELLE",
+                        "gender": "F",
+                        "age": 49
+                    }
+            ]'
+        >
+        <br />
+            <table border="1" width="80%">
+                <tr>
+                    <th>First name</th>
+                    <th>Family name</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                </tr>
+                <tr ng-repeat="customer in listCustomers  | orderBy:'age' | filter:filterValue">
+                    <td> {{ customer.firstName }} </td>
+                    <td> {{ customer.familyName }} </td>
+                    <td> {{ customer.gender }} </td>
+                    <td> {{ customer.age }} </td>
+                </tr>
+            </table>
         </div>
             
 
