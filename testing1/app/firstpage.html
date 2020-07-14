@@ -73,12 +73,14 @@
         <br />
             <table border="1" width="90%">
                 <tr>
+                    <th>N°</th>
                     <th>First name</th>
                     <th>Family name</th>
                     <th>Gender</th>
                     <th>Age</th>
                 </tr>
                 <tr ng-repeat="customer in customers  | orderBy:'age' | filter:filterValue">
+                    <td> {{ $index + 1}}</td>
                     <td> {{ customer.firstName }} </td>
                     <td> {{ customer.familyName }} </td>
                     <td> {{ customer.gender }} </td>
