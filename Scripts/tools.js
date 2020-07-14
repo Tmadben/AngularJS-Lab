@@ -40,9 +40,10 @@ customerApp.controller('customersController', function ($scope) {
            }
    ];
 
-    $scope.addNewCustomer = function(customer) {
-        $scope.listCustomers.push(customer);
-        customer = {};
+    $scope.addNewCustomer = function() {
+    
+        $scope.listCustomers.push($scope.cus);
+        $scope.cus = null;
         
     }
 
