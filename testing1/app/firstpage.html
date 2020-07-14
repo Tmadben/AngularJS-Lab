@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html ng-app=>
+<html ng-app="customerApp">
+
     <header>
-        <title>My 1rst AngularJS Page</title>
-        
+        <title>My 1rst AngularJS Page</title> 
     </header>
     
-    <body>
+    <body ng-controller="customersController">
         <h3>Add new Customers</h3>
-        <form>
+        <form class="simple-form">
             <fieldset>
                 <legend>Information of Customer</legend>
 
                 <label for="firstName">First Name :</label> 
-                <input type="text" ng-model="firstName"/> <br /><br />
+                <input type="text" ng-model="cus.firstName"/> <br /><br />
                 <label for="familyName">Family Name :</label>
-                <input type="text" ng-model="familyName"/> <br /><br />
+                <input type="text" ng-model="cus.familyName"/> <br /><br />
                 <label for="gender">Gender : </label>
-                <input type="text" ng-model="gender"/> <br /><br />
+                <input type="text" ng-model="cus.gender"/> <br /><br />
                 <label for="age">Age : </label>
-                <input type="text" ng-model="age"/> <br /><br />
+                <input type="text" ng-model="cus.age"/> <br /><br />
 
                 <input type="reset" value="Annuler" /> &nbsp;&nbsp;
-                <input type="button" value="Valider" ng-click="addNewCustomer()"/>
+                <input type="submit" value="Valider" ng-click="addNewCustomer(cus)"/>
             </fieldset>
         </form>
 
@@ -32,44 +32,7 @@
         <input type="text" ng-model="filterValue"/> &nbsp;&nbsp; Filtering with : {{ filterValue | uppercase }}
         <br />
  
-        <div class="container" ng-init='customers=[
-        {
-            "firstName": "JOHANNA",
-            "familyName": "VICENT",
-            "gender": "F",
-            "age": 50
-        },
-        {
-            "firstName": "CECILIA",
-            "familyName": "FRANK",
-            "gender": "F",
-            "age": 18
-        },
-        {
-            "firstName": "BERNARD",
-            "familyName": "COUTEAU",
-            "gender": "M",
-            "age": 60
-        },
-        {
-            "firstName": "ALAIN",
-            "familyName": "LE SAC",
-            "gender": "M",
-            "age": 34
-        },
-        {
-            "firstName": "YVES",
-            "familyName": "YDE JACQUES",
-            "gender": "M",
-            "age": 45
-        },
-        {
-            "firstName": "LUCIE",
-            "familyName": "CARTELLE",
-            "gender": "F",
-            "age": 49
-        }
-]'>
+        <div>
         <br />
             <table border="1" width="90%">
                 <tr>
@@ -79,7 +42,7 @@
                     <th>Gender</th>
                     <th>Age</th>
                 </tr>
-                <tr ng-repeat="customer in customers  | orderBy:'age' | filter:filterValue">
+                <tr ng-repeat="customer in listCustomers  | orderBy:'age' | filter:filterValue">
                     <td> {{ $index + 1}}</td>
                     <td> {{ customer.firstName }} </td>
                     <td> {{ customer.familyName }} </td>
@@ -88,13 +51,8 @@
                 </tr>
             </table>
             <br />
-            
-            </ol>
         </div>
-            
-
-        <script src="../../Scripts/angular.min.js"></script>
-        <script src="../../Scripts/tools.js"></script>
-        
+        <script type="text/javascript" src="../../Scripts/angular.min.js"></script>
+        <script type="text/javascript" src="../../Scripts/tools.js"></script>     
     </body>
 </html>
