@@ -29,7 +29,8 @@
         
         Filter: 
     
-        <input type="text" ng-model="filterValue"/> &nbsp;&nbsp; Filtering with : {{ filterValue | uppercase }}
+        <input type="text" ng-model="filterValue"/> &nbsp;&nbsp; Value typed : {{ filterValue  }}
+        <p>Filtering with: <span ng-bind="filterValue | uppercase "></span></p>
         <br />
  
         <div>
