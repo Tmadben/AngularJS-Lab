@@ -5,8 +5,8 @@ customerApp.config(function($routeProvider){
     $routeProvider
         .when('/',
             {
-                controller:
-                templateUrl:
+                controller: 'mainViewController',
+                templateUrl: ''
             }
         )
         .when('/addnewcustomer',
