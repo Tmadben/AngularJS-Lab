@@ -1,7 +1,7 @@
 //List of all the customers
 var customerApp = angular.module("customerApp", []);
 
-customerApp.controller('customersController', function ($scope) {
+customerApp.controller('listAllCustomersController', function ($scope) {
    $scope.listCustomers =  [
            {
                "firstName": "JOHANNA",

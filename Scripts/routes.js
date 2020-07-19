@@ -11,19 +11,19 @@ customerApp.config(function($routeProvider){
         )
         .when('/addnewcustomer',
             {
-                controller: 'addNewCustomer',
+                controller: 'addNewCustomerController',
                 templateUrl: 'addNewCustomer.html'
             }
         )
         .when('/detailscustomer',
             {
-                controller: 'detailsCustomer',
+                controller: 'detailsCustomerController',
                 templateUrl: 'detailsCustomer.html'
             }
         )
         .when('/listallcustomers',
             {
-                controller: 'listAllCustomers',
+                controller: 'listAllCustomersController',
                 templateUrl: 'listAllCustomer.hmtl'
             }
         )

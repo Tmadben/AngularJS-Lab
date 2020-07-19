@@ -1,1 +1,19 @@
-<div></div>
+<div class="container">
+    <h3>Add new Customers</h3>
+    <form class="simple-form">
+        <fieldset>
+            <legend>Information of Customer</legend>
+
+            <label for="firstName">First Name :</label> 
+            <input type="text" ng-model="cus.firstName"/> <br /><br />
+            <label for="familyName">Family Name :</label>
+            <input type="text" ng-model="cus.familyName"/> <br /><br />
+            <label for="gender">Gender : </label>
+            <input type="text" ng-model="cus.gender"/> <br /><br />
+            <label for="age">Age : </label>
+            <input type="text" ng-model="cus.age"/> <br /><br />
+            <input type="reset" value="Annuler" /> &nbsp;&nbsp;
+            <input type="submit" value="Valider" ng-click="addNewCustomer()"/>
+        </fieldset>
+    </form>
+</div>
