@@ -25,34 +25,6 @@
             </fieldset>
         </form>
 
-        <h3>List of Customers</h3>
-        
-        Filter: 
-    
-        <input type="text" ng-model="filterValue"/> &nbsp;&nbsp; Value typed : {{ filterValue  }}
-        <p>Filtering with: <span ng-bind="filterValue | uppercase "></span></p>
-        <br />
- 
-        <div>
-        <br />
-            <table border="1" width="90%">
-                <tr>
-                    <th>N°</th>
-                    <th>First name</th>
-                    <th>Family name</th>
-                    <th>Gender</th>
-                    <th>Age</th>
-                </tr>
-                <tr ng-repeat="customer in listCustomers  | orderBy:'age' | filter:filterValue">
-                    <td> {{ $index + 1}}</td>
-                    <td> {{ customer.firstName }} </td>
-                    <td> {{ customer.familyName }} </td>
-                    <td> {{ customer.gender }} </td>
-                    <td> {{ customer.age }} </td>
-                </tr>
-            </table>
-            <br />
-        </div>
         <script type="text/javascript" src="../../Scripts/angular.min.js"></script>
         <script type="text/javascript" src="../../Scripts/tools.js"></script>     
     </body>
