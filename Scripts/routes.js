@@ -6,25 +6,25 @@ customerApp.config(function($routeProvider){
         .when('/',
             {
                 controller: 'mainViewController',
-                templateUrl: ''
+                templateUrl: 'mainView.html'
             }
         )
         .when('/addnewcustomer',
             {
-                controller:
-                templateUrl:
+                controller: 'addNewCustomer',
+                templateUrl: 'addNewCustomer.html'
             }
         )
         .when('/detailscustomer',
             {
-                controller:
-                templateUrl:
+                controller: 'detailsCustomer',
+                templateUrl: 'detailsCustomer.html'
             }
         )
         .when('/listallcustomers',
             {
-                controller:
-                templateUrl:
+                controller: 'listAllCustomers',
+                templateUrl: 'listAllCustomer.hmtl'
             }
         )
         .otherwise({ redirectTo: '/' })
