@@ -6,25 +6,25 @@ customerApp.config(function($routeProvider){
         .when('/',
             {
                 controller: 'mainViewController',
-                templateUrl: 'mainView.html'
+                templateUrl: '../../public/app/index.html'
             }
         )
         .when('/addnewcustomer',
             {
                 controller: 'addNewCustomerController',
-                templateUrl: 'addNewCustomer.html'
+                templateUrl: '../../public/views/addNewCustomer.html'
             }
         )
         .when('/detailscustomer',
             {
                 controller: 'detailsCustomerController',
-                templateUrl: 'detailsCustomer.html'
+                templateUrl: '../../public/views/detailsCustomer.html'
             }
         )
         .when('/listallcustomers',
             {
                 controller: 'listAllCustomersController',
-                templateUrl: 'listAllCustomer.hmtl'
+                templateUrl: '../../public/views/listAllCustomer.hmtl'
             }
         )
         .otherwise({ redirectTo: '/' })
