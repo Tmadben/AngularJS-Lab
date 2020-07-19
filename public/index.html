@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="customerApp">
+
+    <header>
+        <title>Customers App 1.0.0</title> 
+    </header>
+    
+    <body>
+
+        <div class="container">
+            <ol>
+                <li><a href="#/home">Home</a></li>
+                <li><a href="#/addnewcustomer">Add new Customer</a></li>
+                <li><a href="#/listallcustomers">List of Customers</a></li>
+            </ol>
+        </div>
+        <div>
+            <div data-ng-view=""></div>
+        </div>
+        
+        <script type="text/javascript" src="../Scripts/angular.min.js"></script>
+        <script type="text/javascript" src="../Scripts/routes.js"></script>
+        <script type="text/javascript" src="../controller/addNewCustomer.js"></script>
+        <script type="text/javascript" src="../controller/detailsOfCustomer.js"></script>
+        <script type="text/javascript" src="../controller/listAllCustomers.js"></script> 
+        <script type="text/javascript" src="../controller/mainViewController.js"></script>    
+    </body>
+</html>

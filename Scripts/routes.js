@@ -3,10 +3,10 @@ var customerApp = angular.module("customerApp", []);
 customerApp.config(function($routeProvider){
 
     $routeProvider
-        .when('/',
+        .when('/home',
             {
                 controller: 'mainViewController',
-                templateUrl: '../../public/app/index.html'
+                templateUrl: '../../public/index.html'
             }
         )
         .when('/addnewcustomer',
@@ -27,6 +27,6 @@ customerApp.config(function($routeProvider){
                 templateUrl: '../../public/views/listAllCustomer.hmtl'
             }
         )
-        .otherwise({ redirectTo: '/' })
+        .otherwise({ redirectTo: '/home' })
 
 });
