@@ -7,6 +7,7 @@
     background: #D4D4CE;
     float: left;
     font-size: 30px;
+    font-family: Verdana;
     height: 55px;
     line-height: 55px;
     text-align: center;
@@ -16,6 +17,7 @@
     background: #3fb0ac;
     color: #FFFFF0;
     font-size: 30px;
+    font-family: Verdana;
     height: 55px;
     line-height: 55px;
     text-align: center;
@@ -39,7 +41,8 @@
   .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 22px;
+    font-family: sans-serif;
     color: #111111;
     display: block;
     transition: 0.3s;
@@ -47,7 +50,8 @@
   
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
-    color: #f1f1f1;
+    color: #E0AA3E;
+    font-size: 24px;
   }
   
   /* Position and style the close button (top right corner) */
