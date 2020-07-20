@@ -9,7 +9,7 @@
 .imgsidebar {
   width: 10%;
   height: 10%;
-  background: #D4D4CE;
+  background: #FDD7E4;
   opacity: 0.5;
   border: 0px;
 }
@@ -17,7 +17,7 @@
 
 #openSideNav {
     width: 10%;
-    background: #D4D4CE;
+    background: #FDD7E4;
     float: left;
     font-size: 27px;
     font-family: Verdana;
@@ -31,10 +31,29 @@
     color: #FFFFF0;
     font-size: 27px;
     font-family: Verdana;
-    height: 55px;
-    line-height: 55px;
+    height: 60px;
+    line-height: 60px;
     text-align: center;
 }
+
+/* Branding Bar */
+
+#logo {
+  max-width: 70%;
+  max-height: 70%;
+  border-radius: 50px;
+ 
+}
+
+
+#branding {
+  background: #D4D4CE;
+  text-align: center;
+  width: 10%;
+  height: 60px;
+  line-height: 60px;
+}
+
 
 /* The side navigation menu */
 .sidenav {
@@ -44,7 +63,7 @@
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #D4D4CE;
+    background-color: #FDD7E4;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -94,9 +113,9 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background: #eeeeea;
+    background: #3fb0ac;
     font-size: 15px;
     font-family: Verdana;
-    color: black;
+    color: #FFFFF0;
     text-align: center;
   }
