@@ -5,6 +5,14 @@
     background: #D4D4CE;
     opacity: 0.5
 }
+
+.imgsidebar {
+  width: 10%;
+  height: 10%;
+  background: #D4D4CE;
+  opacity: 0.5;
+  border: 0px;
+}
 /* Put the main Title at the right side*/
 
 #openSideNav {
