@@ -74,3 +74,16 @@
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+  /* The footer */
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #eeeeea;
+    font-size: 15px;
+    font-family: Verdana;
+    color: black;
+    text-align: center;
+  }
